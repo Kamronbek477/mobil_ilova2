@@ -54,7 +54,8 @@ class _MyAppState extends State<MyApp> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.red,
-                hintText: "Matn kiriting✍...",
+                hintText: "Matn kiriting✍",
+                contentPadding: EdgeInsets.symmetric(horizontal: 106),
               ),
               onChanged: (text) {
                 setState(() {
@@ -63,23 +64,25 @@ class _MyAppState extends State<MyApp> {
               },
             ),
             SizedBox(height: 12),
-            TextField(
-              controller: _secondController,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.green,
-                hintText: "takrorlanuvchi matn👆...",
-              ),
-            ),
-            SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 setState(() {
                   _secondController.text = _firstText;
                 });
               },
-              child: Text("Yuborish👌"),
-            )
+              child: Text("Yuborish✅"),
+            ),
+            SizedBox(height: 12),
+            TextField(
+              controller: _secondController,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.green,
+                hintText: "Takrorlanuvchi matn👆...",
+                contentPadding: EdgeInsets.symmetric(horizontal: 86),
+              ),
+            ),
+            SizedBox(height: 30),
           ],
         ),
         bottomNavigationBar: Theme(
