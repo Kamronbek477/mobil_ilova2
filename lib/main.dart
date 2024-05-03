@@ -49,19 +49,22 @@ class _MyAppState extends State<MyApp> {
               backgroundImage: AssetImage("rasm/1.jpg"),
             ),
             SizedBox(height: 12),
-            TextField(
-              controller: _firstController,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.red,
-                hintText: "Matn kiriting✍",
-                contentPadding: EdgeInsets.symmetric(horizontal: 106),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 56),
+              child: TextField(
+                controller: _firstController,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.red,
+                  hintText: "Matn kiriting✍",
+                  contentPadding: EdgeInsets.symmetric(horizontal: 51),
+                ),
+                onChanged: (text) {
+                  setState(() {
+                    _firstText = text;
+                  });
+                },
               ),
-              onChanged: (text) {
-                setState(() {
-                  _firstText = text;
-                });
-              },
             ),
             SizedBox(height: 12),
             ElevatedButton(
@@ -73,13 +76,16 @@ class _MyAppState extends State<MyApp> {
               child: Text("Yuborish✅"),
             ),
             SizedBox(height: 12),
-            TextField(
-              controller: _secondController,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.green,
-                hintText: "Takrorlanuvchi matn👆...",
-                contentPadding: EdgeInsets.symmetric(horizontal: 86),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 36),
+              child: TextField(
+                controller: _secondController,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.green,
+                  hintText: "Takrorlanuvchi matn👆...",
+                  contentPadding: EdgeInsets.symmetric(horizontal: 26),
+                ),
               ),
             ),
             SizedBox(height: 30),
